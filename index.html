@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <section class="countdown container">
+      <!-- Heading -->
+      <header class="countdown__header">
+        <p class="alert"></p>
+        <h2 class="countdown__heading">Countdown Timer</h2>
+      </header>
+
+      <!-- Main Content -->
+      <div class="countdown__content">
+        <!-- Hours -->
+        <div class="hours">
+          <label for="hour">Hours</label>
+          <input
+            type="number"
+            maxlength="2"
+            placeholder="00"
+            id="hour"
+            autofocus
+            oninput="this.value=this.value.slice(0, this.maxLength)"
+          />
+        </div>
+
+        <!-- Minutes -->
+        <div class="hours">
+          <label for="hour">Minutes</label>
+          <input
+            type="number"
+            maxlength="2"
+            placeholder="00"
+            id="minute"
+            oninput="this.value=this.value.slice(0, this.maxLength)"
+          />
+        </div>
+
+        <!-- Seconds -->
+        <div class="hours">
+          <label for="hour">Seconds</label>
+          <input
+            type="number"
+            maxlength="2"
+            placeholder="00"
+            id="second"
+            oninput="this.value=this.value.slice(0, this.maxLength)"
+          />
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-container">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </section>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
